@@ -1,0 +1,26 @@
+QWidget
+{
+    background-color : rgb(27, 28, 30);
+    color : rgb(202, 207, 210);
+}
+
+QLineEdit
+{
+    border-style : none;
+    font-size : 16px;
+}
+
+QPushButton
+{
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(53, 57, 60), stop:1 rgb(33, 34, 36));
+    shadow : rgb(9, 10, 12);
+    border: 2px solid rgb(9, 10, 12);
+    border-radius: 5px;
+    padding-top : 0px;
+    padding-bottom : 0px;
+    padding-left : 10px;
+    padding-right : 10px;
+    color : rgb(202, 207, 210);
+    height : 20px;
+    width : 60px;
+}
