@@ -355,6 +355,9 @@
     <Compile Include="QSpinBox_custom signals and slots.py" />
     <Compile Include="QSystemTrayIcon.py" />
     <Compile Include="QTabBar.py" />
+    <Compile Include="QTabBar\QTabBar_navigation bar.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="QTableView\QTreeView_highlight on hover toggle.py" />
     <Compile Include="QTabWidget.py" />
     <Compile Include="QToolTip\QToolTip_constantly updating tooltip that follows cursor.py" />
@@ -542,6 +545,7 @@
     <Folder Include="DT_Advanced PySide for Maya\41_end\digital_tutors\widgets\" />
     <Folder Include="GIF\" />
     <Folder Include="Drawing\" />
+    <Folder Include="QTabBar\" />
     <Folder Include="_TestImages\" />
     <Folder Include="PySide Intro\" />
     <Folder Include="PySide Renaming\" />

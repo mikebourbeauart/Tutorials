@@ -5,7 +5,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>13165193-a4a6-4797-a41a-f1bed1caa14e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>LoggingTutorial.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,7 +23,11 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="LoggingTutorial.py" />
+    <Folder Include="modules\" />
+    <Folder Include="modules\mb-tools\" />
+    <Folder Include="modules\mb-tools\mb-logging\" />
+    <Folder Include="modules\mb-tools\mb-logging\source\" />
+    <Folder Include="modules\mb-tools\mb-logging\source\mb_logging\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
