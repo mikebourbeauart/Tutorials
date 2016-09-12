@@ -9,6 +9,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "LoggingTutorial", "..\Loggi
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PySideTutorials", "..\PySideTutorials\PySideTutorials.pyproj", "{CA25A57F-D134-4AD8-A6AD-826E1171B34E}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PySideExamples", "..\PySideExamples\PySideExamples.pyproj", "{5CD37391-7E4D-4C32-A83C-18B7022A807C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{13165193-A4A6-4797-A41A-F1BED1CAA14E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA25A57F-D134-4AD8-A6AD-826E1171B34E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CA25A57F-D134-4AD8-A6AD-826E1171B34E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CD37391-7E4D-4C32-A83C-18B7022A807C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CD37391-7E4D-4C32-A83C-18B7022A807C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
