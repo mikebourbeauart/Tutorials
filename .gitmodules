@@ -1,0 +1,3 @@
+[submodule "PySideExamples"]
+	path = PySideExamples
+	url = https://github.com/PySide/Examples.git

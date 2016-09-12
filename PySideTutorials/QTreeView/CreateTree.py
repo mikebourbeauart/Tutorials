@@ -37,7 +37,7 @@ def print_map(node, lvl=0):
         print '    ' * lvl + n.title
         if len(n.children) > 0:
             print_map(n, lvl+1)
-print treeMap
+#print treeMap
 print_map(Root)
 
 """

@@ -1,16 +1,12 @@
 from PySide import QtCore, QtGui
-from shiboken import wrapInstance
-import maya.OpenMayaUI as mui
+import __shared
 
-def get_parent():
-    ptr = mui.MQtUtil.mainWindow()
-    return wrapInstance( long( ptr ), QtGui.QWidget )   
 
 ############################################        
 ''' Classes '''
 ############################################
 class Main_Window( QtGui.QDialog ):
-    def __init__( self, parent=get_parent() ):
+    def __init__( self, parent=__shared.get_parent() ):
         super( Main_Window, self ).__init__( parent )
         
         self.create_gui()
@@ -74,7 +70,7 @@ class MyModel(QtGui.QStandardItemModel):
 ############################################
 class File_List( QtGui.QTreeView ):
     ''' Create the file filters '''
-    def __init__( self, mainUIWindow, parent=get_parent() ):
+    def __init__( self, mainUIWindow, parent=__shared.get_parent() ):
         super( File_List, self ).__init__( parent )
         
         self.setModel(mainUIWindow.tv_model)

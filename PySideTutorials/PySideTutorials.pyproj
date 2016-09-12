@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ca25a57f-d134-4ad8-a6ad-826e1171b34e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Drawing\QPainter_draw image on label.py</StartupFile>
+    <StartupFile>QMenuBar\QMenuBar_add to QWidget.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -349,6 +349,13 @@
     <Compile Include="QCompleter\QCompleter_as a separate class.py" />
     <Compile Include="QCompleter\QCompleter_custom completer rules.py" />
     <Compile Include="QListWidget\QListWidget_custom list items.py" />
+    <Compile Include="QMainWindow\QMainWindow_menu bar.py" />
+    <Compile Include="QMainWindow\QMainWindow_status bar.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QMenuBar\QMenuBar_add to QWidget.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="QPushButton_popup window position based on ui position and window edge.py" />
     <Compile Include="QPushButton_popup window position based on ui position.py" />
     <Compile Include="QPushButton_turn off button highlight after selection.py" />
@@ -405,6 +412,9 @@
     <Compile Include="tabAsHotkey.py" />
     <Compile Include="Tetris_game.py" />
     <Compile Include="tree widget template.py" />
+    <Compile Include="__shared.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Animation\" />
@@ -545,6 +555,8 @@
     <Folder Include="DT_Advanced PySide for Maya\41_end\digital_tutors\widgets\" />
     <Folder Include="GIF\" />
     <Folder Include="Drawing\" />
+    <Folder Include="QMenuBar\" />
+    <Folder Include="QMainWindow\" />
     <Folder Include="QTabBar\" />
     <Folder Include="_TestImages\" />
     <Folder Include="PySide Intro\" />
