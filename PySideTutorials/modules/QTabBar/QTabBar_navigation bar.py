@@ -4,18 +4,27 @@ import sys
 from PySide import QtGui
 from PySide import QtCore
 
+shared_path = os.path.abspath(
+		os.path.join(os.path.dirname(__file__), '..')
+	)
+
+if not shared_path in sys.path:
+	sys.path.append(shared_path)
+
+from __shared import app_utils
+from __shared import window_utils
 
 
 class EntityBrowser(QtGui.QDialog):
 	'''Entity browser.'''
 
-	##: Signal when location changed.
-	#locationChanged = QtCore.Signal()
+	#: Signal when location changed.
+	locationChanged = QtCore.Signal()
 
 	#: Signal when selection changes. Pass new selection.
-	#selectionChanged = QtCore.Signal(object)
+	selectionChanged = QtCore.Signal(object)
 
-	def __init__(self, root=None, parent=None):
+	def __init__(self, root=None, parent=window_utils.get_ui_parent()):
 		'''Initialise browser with *root* entity.
 
 		Use an empty *root* to start with list of projects.
@@ -30,6 +39,7 @@ class EntityBrowser(QtGui.QDialog):
 
 		self._create_gui()
 		self._post_create_gui()
+		self._get_contents()
 
 	def _create_gui(self):
 		'''Construct widget.'''
@@ -73,20 +83,20 @@ class EntityBrowser(QtGui.QDialog):
 
 		self.contentSplitter.addWidget(self.view)
 
-		proxy = QtGui.QSortFilterProxyModel(self) #ftrack_connect.ui.model.entity_tree.EntityTreeProxyModel(self)
-		model = QtGui.QStandardItemModel()
+		self.proxy = QtGui.QSortFilterProxyModel(self) #ftrack_connect.ui.model.entity_tree.EntityTreeProxyModel(self)
+		self.model = QtGui.QStandardItemModel()
 
-		model.root = self.model.
+		#model.root = self.model.
 		#model = ftrack_connect.ui.model.entity_tree.EntityTreeModel(
 		#	root=ftrack_connect.ui.model.entity_tree.ItemFactory(
 		#		self._session, self._root
 		#	),
 		#	parent=self
 		#)
-		proxy.setSourceModel(model)
-		proxy.setDynamicSortFilter(True)
+		self.proxy.setSourceModel(self.model)
+		self.proxy.setDynamicSortFilter(True)
 
-		self.view.setModel(proxy)
+		self.view.setModel(self.proxy)
 		self.view.setSortingEnabled(True)
 
 		self.contentSplitter.setStretchFactor(1, 1)
@@ -142,6 +152,22 @@ class EntityBrowser(QtGui.QDialog):
 		selectionModel.selectionChanged.connect(self._onSelectionChanged)
 
 		self._updateNavigationBar()
+
+	#--------------------------------------------------------------------
+	def _get_contents(self):
+		self.model.clear()
+		#self.model.setHorizontalHeaderLabels(["name","date"])
+		contents=["path1","path2"]
+		for path in contents:
+			self._add_file(path)
+			
+	#--------------------------------------------------------------------
+	def _add_file(self, name, date):
+		name = QtGui.QStandardItem(name)
+		user = "me"
+		name.setToolTip("<b>{0}</b><br><b>{1}</b>".format(name.text(), user) )                                            # Here's where I set the tooltip
+		name.setIcon(self.style().standardIcon(QtGui.QStyle.SP_DirOpenIcon))
+		self.model.appendRow(name)
 
 	@property
 	def model(self):
@@ -319,12 +345,9 @@ class EntityBrowser(QtGui.QDialog):
 		currentRootIndex = self.view.rootIndex()
 		self.model.reloadChildren(currentRootIndex)
 
-############################################
-if __name__ == '__main__': 
 
-	app = QtGui.QApplication(sys.argv)
-	entity_browser_ui = EntityBrowser()
-	entity_browser_ui.show()
-	sys.exit(app.exec_())
-
+app = QtGui.QApplication(sys.argv)
+entity_browser_ui = EntityBrowser()
+entity_browser_ui.show()
+sys.exit(app.exec_())
 	
