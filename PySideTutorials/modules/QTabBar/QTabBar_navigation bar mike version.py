@@ -36,8 +36,6 @@ class MainWindow( QtGui.QDialog ):
 		self.proxy = QtGui.QSortFilterProxyModel(self)
 		self.model = MyModel()
 
-
-
 	#--------------------------------------------------------------------
 	def create_layout( self ):
 

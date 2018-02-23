@@ -5,14 +5,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ca25a57f-d134-4ad8-a6ad-826e1171b34e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>modules\QTabBar\QTabBar_navigation bar mike version.py</StartupFile>
+    <StartupFile>modules\QStateMachine\QStateMachine_sliding tab widget.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>PySideTutorials</Name>
     <RootNamespace>PySideTutorials</RootNamespace>
-    <InterpreterId>{0125a2f4-a87d-4172-b3a2-51bd39a4ddd7}</InterpreterId>
+    <InterpreterId>{9a7a9026-48c1-4688-9d5d-e5699d47d074}</InterpreterId>
     <InterpreterVersion>2.7</InterpreterVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -335,6 +335,9 @@
     <Compile Include="modules\GIF\QTreeView_fitTreeViewToWindow.py" />
     <Compile Include="modules\GIF\QTreeView_multiLineDelegate.py" />
     <Compile Include="modules\GIF\QTreeView_rowSize.py" />
+    <Compile Include="modules\QStateMachine\QStateMachine_sliding tab widget.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="modules\QTabBar\QTabBar_navigation bar mike version.py" />
     <Compile Include="modules\__shared\window_utils.py">
       <SubType>Code</SubType>
@@ -573,6 +576,7 @@
     <Folder Include="modules\GIF\" />
     <Folder Include="modules\Drawing\" />
     <Folder Include="modules\" />
+    <Folder Include="modules\QStateMachine\" />
     <Folder Include="modules\__shared\" />
     <Folder Include="modules\QMenuBar\" />
     <Folder Include="modules\QMainWindow\" />
@@ -614,17 +618,7 @@
     <Content Include="modules\_TestImages\ftrack_create_asset.png" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="venv\">
-      <Id>{0125a2f4-a87d-4172-b3a2-51bd39a4ddd7}</Id>
-      <BaseInterpreter>{9a7a9026-48c1-4688-9d5d-e5699d47d074}</BaseInterpreter>
-      <Version>2.7</Version>
-      <Description>venv (Python 64-bit 2.7)</Description>
-      <InterpreterPath>Scripts\python.exe</InterpreterPath>
-      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
-      <LibraryPath>Lib\</LibraryPath>
-      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
-      <Architecture>Amd64</Architecture>
-    </Interpreter>
+    <InterpreterReference Include="{9a7a9026-48c1-4688-9d5d-e5699d47d074}\2.7" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
